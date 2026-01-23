@@ -25,11 +25,11 @@ A full-stack MERN application for tracking job applications, managing placement 
 - [Usage](#usage)
 - [API Documentation](#api-documentation)
 - [Project Structure](#project-structure)
-- [Screenshots](#screenshots)
+
 
 ---
 
-## 🎯 Overview
+## <a id="overview"></a>🎯 Overview
 
 **SmartTrack** is a comprehensive job application tracking platform designed to help students and job seekers manage their placement journey efficiently. The platform provides a centralized dashboard to track applications, monitor progress, add notes, and analyze statistics.
 
@@ -46,13 +46,13 @@ A full-stack MERN application for tracking job applications, managing placement 
 
 ---
 
-## ✨ Features
+## <a id="features"></a>✨ Features
 
 ### 🔐 Authentication & Security
 
 - **Stateless Authentication**: Short-lived Access Tokens (15m) and Long-lived Refresh Tokens (7d)
 - **Secure Storage**: Refresh tokens stored in HTTP-Only, Secure, SameSite cookies
-- **RBAC**: Role-Based Access Control (Student, Admin, Placement Cell)
+- **RBAC Architecture**: Scalable Role-Based Access Control logic (Student, Admin) ready for future expansion
 - **Secure Logout**: Server-side token invalidation
 - User registration and login
 - Password hashing with bcrypt
@@ -61,8 +61,8 @@ A full-stack MERN application for tracking job applications, managing placement 
 
 ### 📧 Email Notifications
 
-- **Welcome Emails**: Automated emails sent upon successful registration
-- **Mailtrap Integration**: Secure testing environment for email delivery
+- **Welcome Emails**: Automated email logic integrated with **Mailtrap** for safe testing and development environment email delivery
+- **Mailtrap Integration**: Secure sandbox environment to prevent spamming real email addresses during development
 
 
 ### 📊 Application Management
@@ -107,7 +107,7 @@ A full-stack MERN application for tracking job applications, managing placement 
 
 ---
 
-## 🛠 Tech Stack
+## <a id="tech-stack"></a>🛠 Tech Stack
 
 ### Frontend
 
@@ -135,7 +135,7 @@ A full-stack MERN application for tracking job applications, managing placement 
 
 ---
 
-## 🚀 Installation
+## <a id="installation"></a>🚀 Installation
 
 ### Prerequisites
 
@@ -166,7 +166,7 @@ npm install
 
 ---
 
-## ⚙️ Configuration
+## <a id="configuration"></a>⚙️ Configuration
 
 ### Backend Configuration
 
@@ -194,7 +194,7 @@ baseURL: "http://localhost:YOUR_PORT/api";
 
 ---
 
-## 💻 Usage
+## <a id="usage"></a>💻 Usage
 
 ### Start the Development Server
 
@@ -243,7 +243,7 @@ npm run preview
 
 ---
 
-## 📡 API Documentation
+## <a id="api-documentation"></a>📡 API Documentation
 
 ### Authentication Endpoints
 
@@ -382,7 +382,7 @@ Content-Type: application/json
 
 ---
 
-## 📁 Project Structure
+## <a id="project-structure"></a>📁 Project Structure
 
 ```
 MERN/
@@ -422,19 +422,6 @@ MERN/
 │
 └── README.md
 ```
-
----
-
-## 📸 Screenshots
-
-> **Note:** Add screenshots of your application here
-
-- Dashboard with application list and analytics
-- Login/Register pages
-- Profile management page
-- Application details with notes
-
----
 
 ## 👨‍💻 Author
 

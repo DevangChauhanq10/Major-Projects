@@ -10,7 +10,9 @@ This repository serves as a collection of my **Major Full-Stack Projects**, buil
 A comprehensive **Job Application Tracking Platform** designed to help students and job seekers manage their placement journey efficiently.
 - **Stack:** MERN (MongoDB, Express, React, Node.js)
 - **Status:** ✅ Deployed / Deployable
-- **Features:** Authentication, Role-based Access, Analytics Dashboard, Email Notifications.
+- **🔐 Secure Authentication:** JWT-based auth with Access & Refresh tokens.
+- **🛡️ RBAC Architecture:** Scalable Role-Based Access Control logic (Student, Admin) ready for future expansion.
+- **📧 Email System:** integrated Nodemailer with Mailtrap for safe testing of automated welcome emails in a development environment.s.
 
 ---
 
