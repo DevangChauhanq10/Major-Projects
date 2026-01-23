@@ -4,3 +4,7 @@ dist
 .DS_Store
 coverage
 .vercel
+test-output.txt
+query
+server/test-output.txt
+server/query
