@@ -36,7 +36,7 @@ A full-stack MERN application for tracking job applications, managing placement 
 ### Key Highlights
 
 - ✅ **Full-stack MERN application** with modern UI/UX
-- ✅ **Secure authentication** with JWT (Access + Refresh Tokens) & Role-Based Access Control (RBAC)
+- ✅ **Secure authentication** with JWT (Access + Refresh Tokens) & Extensible RBAC Architecture
 - ✅ **Real-time analytics** with interactive charts
 - ✅ **Advanced Search** with pagination, filtering, and text indexing
 - ✅ **Dark mode** theme with responsive design
