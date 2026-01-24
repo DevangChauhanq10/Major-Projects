@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle, Layout, Shield, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { ModeToggle } from '../components/mode-toggle';
 
 const Landing = () => {
     return (
@@ -18,6 +19,7 @@ const Landing = () => {
                         </span>
                     </div>
                     <div className="flex items-center space-x-4">
+                        <ModeToggle />
                         <Link to="/login">
                             <Button variant="ghost" className="hidden sm:inline-flex">Sign In</Button>
                         </Link>
