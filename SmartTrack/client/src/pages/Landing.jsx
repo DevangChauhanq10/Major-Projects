@@ -41,9 +41,7 @@ const Landing = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
                     >
-                        <span className="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6 border border-primary/20">
-                            🚀 The Ultimate Job Application Tracker
-                        </span>
+
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
                             Master Your Job Search <br />
                             <span className="text-primary">With Confidence</span>

@@ -32,7 +32,7 @@ const Register = () => {
 
             
              <div className="absolute inset-0 z-0">
-                 <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-purple-500/30 rounded-full mix-blend-multiply filter blur-[128px] animate-blob" />
+                 <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-500/30 rounded-full mix-blend-multiply filter blur-[128px] animate-blob" />
                  <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-blue-500/30 rounded-full mix-blend-multiply filter blur-[128px] animate-blob animation-delay-2000" />
                  <div className="absolute bottom-[-10%] left-[20%] w-[500px] h-[500px] bg-pink-500/30 rounded-full mix-blend-multiply filter blur-[128px] animate-blob animation-delay-4000" />
             </div>

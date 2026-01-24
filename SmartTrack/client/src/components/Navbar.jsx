@@ -52,7 +52,7 @@ const Navbar = () => {
             </Link>
             <Link
               to="/register"
-              className="px-4 py-2 bg-primary hover:bg-indigo-600 text-white rounded-lg transition-colors shadow-lg shadow-indigo-500/30 font-medium"
+              className="px-4 py-2 bg-primary hover:bg-blue-600 text-white rounded-lg transition-colors shadow-lg shadow-blue-500/30 font-medium"
             >
               Get Started
             </Link>

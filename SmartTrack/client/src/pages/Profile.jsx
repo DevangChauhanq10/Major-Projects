@@ -278,7 +278,7 @@ const Profile = () => {
                             </button>
                             <button
                                 onClick={() => setShowChangePassword(true)}
-                                className="flex-1 bg-secondary hover:bg-secondary/80 text-secondary-foreground px-6 py-3 rounded-lg transition-colors flex items-center justify-center space-x-2"
+                                className="flex-1 bg-pink-500 hover:bg-pink-600 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center space-x-2"
                             >
                                 <Lock size={18} />
                                 <span>Change Password</span>

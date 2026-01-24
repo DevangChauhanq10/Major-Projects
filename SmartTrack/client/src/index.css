@@ -16,13 +16,13 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    /* Primary - Indigo 500 #6366f1 -> HSL approx 239 84% 67% */
-    --primary: 239 84% 67%;
+    /* Primary - Blue 600 #2563eb -> HSL approx 221.2 83.2% 53.3% */
+    --primary: 221.2 83.2% 53.3%;
     --primary-foreground: 210 40% 98%;
 
-    /* Secondary - Pink 500 #ec4899 -> HSL approx 330 81% 60% */
-    --secondary: 330 81% 60%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Sky Blue 500 (was Pink) */
+    --secondary: 199 89% 48%;
+    --secondary-foreground: 210 40% 98%;
 
     /* Muted */
     --muted: 210 40% 96.1%;
@@ -39,7 +39,7 @@
     /* Border */
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 239 84% 67%;
+    --ring: 221.2 83.2% 53.3%;
 
     --radius: 0.5rem;
   }
@@ -55,11 +55,12 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    /* Keep same primary/secondary or adjust for dark mode contrast */
-    --primary: 239 84% 67%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Blue 500 (Brighter/Truer Blue for Dark Mode) */
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
 
-    --secondary: 330 81% 60%;
+    /* Secondary - Sky Blue 500 (was Pink) */
+    --secondary: 199 89% 48%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 217.2 32.6% 17.5%;
@@ -73,7 +74,7 @@
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 239 84% 67%;
+    --ring: 217.2 91.2% 59.8%;
   }
 }
 
