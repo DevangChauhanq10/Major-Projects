@@ -72,7 +72,7 @@ const Register = () => {
                             <input 
                                 type="text" 
                                 className="w-full bg-background/50 border border-border text-foreground px-4 py-2.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all placeholder:text-muted-foreground"
-                                placeholder="John Doe"
+                                placeholder="Devang Chauhan"
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
                                 required
@@ -106,7 +106,7 @@ const Register = () => {
                                     className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
                                 >
                                     {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
-                                </button>
+                                </button> 
                             </div>
                         </div>
                         <button 
