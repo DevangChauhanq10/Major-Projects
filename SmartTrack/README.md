@@ -428,7 +428,7 @@ MERN/
 **Devang Chauhan**
 
 - GitHub: [@devangchauhanq10](https://github.com/devangchauhanq10)
-- LinkedIn: [Devang Chauhan](https://www.linkedin.com/in/devang-chauhan-5483b5251/)
+- LinkedIn: [Devang Chauhan](https://www.linkedin.com/in/devang-chauhan-8859703a6/)
 - Email: dccule@gmail.com
 
 ---
