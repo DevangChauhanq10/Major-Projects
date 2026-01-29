@@ -13,17 +13,22 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const { login } = useAuth();
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
+    setError('');
     try {
       await login(email, password);
+      // Wait a bit to show success state or just smooth transition
       navigate('/dashboard');
     } catch (err) {
       setError(err.response?.data?.message || 'Login failed');
+      setIsLoading(false);
     }
   };
 
@@ -107,9 +112,15 @@ const Login = () => {
                         
                         <button 
                             type="submit" 
-                            className="w-full bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-primary-foreground py-2.5 rounded-lg font-semibold shadow-lg shadow-primary/20 transition-all transform hover:scale-[1.02] active:scale-[0.98]"
+                            disabled={isLoading}
+                            className={`w-full bg-primary hover:bg-primary/90 text-primary-foreground py-2.5 rounded-lg font-semibold shadow-lg shadow-primary/20 transition-all transform hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center ${isLoading ? 'opacity-70 cursor-not-allowed' : ''}`}
                         >
-                            Sign In
+                            {isLoading ? (
+                                <>
+                                    <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin mr-2" />
+                                    Signing In...
+                                </>
+                            ) : 'Sign In'}
                         </button>
                     </form>
 

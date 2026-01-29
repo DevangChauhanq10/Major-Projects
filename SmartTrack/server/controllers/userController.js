@@ -50,11 +50,12 @@ const registerUser = asyncHandler(async (req, res) => {
     try {
         const verificationUrl = process.env.CLIENT_URL ? `${process.env.CLIENT_URL}/login` : 'http://localhost:5173/login';
         const emailContent = emailVerificationMailGenContent(user.name, verificationUrl);
-        await sendEmail({
+        // Send email in background to avoid blocking the response
+        sendEmail({
             email: user.email,
             subject: "Welcome to Task Manager! Please verify your email.",
             content: emailContent
-        });
+        }).catch(err => console.error("Email sending invalid:", err));
     } catch (error) {
         console.error("Error sending welcome email:", error);
         // We don't block registration if email fails, just log it

@@ -10,17 +10,21 @@ const Register = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
     const { register } = useAuth();
     const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setIsLoading(true);
+        setError('');
         try {
             await register(name, email, password);
             navigate('/dashboard');
         } catch (err) {
             setError(err.response?.data?.message || 'Registration failed');
+            setIsLoading(false);
         }
     };
 
@@ -111,9 +115,15 @@ const Register = () => {
                         </div>
                         <button 
                             type="submit" 
-                            className="w-full bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-primary-foreground py-2.5 rounded-lg font-semibold shadow-lg shadow-primary/20 transition-all transform hover:scale-[1.02] active:scale-[0.98]"
+                            disabled={isLoading}
+                            className={`w-full bg-primary hover:bg-primary/90 text-primary-foreground py-2.5 rounded-lg font-semibold shadow-lg shadow-primary/20 transition-all transform hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center ${isLoading ? 'opacity-70 cursor-not-allowed' : ''}`}
                         >
-                            Sign Up
+                            {isLoading ? (
+                                <>
+                                    <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin mr-2" />
+                                    Creating Account...
+                                </>
+                            ) : 'Sign Up'}
                         </button>
                     </form>
                     <div className="mt-6 text-center text-sm">

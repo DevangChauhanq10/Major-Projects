@@ -14,7 +14,7 @@ const Landing = () => {
                         <div className="bg-primary/20 p-2 rounded-lg">
                             <Layout className="w-6 h-6 text-primary" />
                         </div>
-                        <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
+                        <span className="text-xl font-bold text-primary">
                             SmartTrack
                         </span>
                     </div>

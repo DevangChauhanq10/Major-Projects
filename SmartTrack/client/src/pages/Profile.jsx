@@ -27,10 +27,6 @@ const Profile = () => {
         confirm: false
     });
 
-    useEffect(() => {
-        fetchProfile();
-    }, []);
-
     const fetchProfile = async () => {
         try {
             const { data } = await API.get('/users/me');
@@ -47,6 +43,10 @@ const Profile = () => {
             setLoading(false);
         }
     };
+
+    useEffect(() => {
+        fetchProfile();
+    }, []);
 
     const handleUpdate = async (e) => {
         e.preventDefault();
