@@ -1,0 +1,26 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Feedback {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  category    Category
+  rating      Int
+  sentiment   String
+  userId      String
+  createdAt   DateTime @default(now())
+}
+
+enum Category {
+  Bug
+  Feature
+  UX
+  Performance
+  Other
+}
