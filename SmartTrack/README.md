@@ -9,6 +9,8 @@
 
 A full-stack MERN application for tracking job applications, managing placement journeys, and analyzing application statistics.
 
+**🚀 [Live Demo](https://devang-smarttrack.vercel.app)**
+
 [Features](#features) • [Tech Stack](#tech-stack) • [Installation](#installation) • [Usage](#usage) • [API Documentation](#api-documentation)
 
 </div>
@@ -32,6 +34,8 @@ A full-stack MERN application for tracking job applications, managing placement 
 ## <a id="overview"></a>🎯 Overview
 
 **SmartTrack** is a comprehensive job application tracking platform designed to help students and job seekers manage their placement journey efficiently. The platform provides a centralized dashboard to track applications, monitor progress, add notes, and analyze statistics.
+
+**🔗 Live Application**: [https://devang-smarttrack.vercel.app](https://devang-smarttrack.vercel.app)
 
 ### Key Highlights
 
@@ -133,6 +137,11 @@ A full-stack MERN application for tracking job applications, managing placement 
 - **CORS** 2.8.5 - Cross-origin resource sharing
 - **dotenv** 17.2.3 - Environment variables
 
+### Deployment
+
+- **Vercel** - Frontend & Backend hosting
+- **MongoDB Atlas** - Database hosting
+
 ---
 
 ## <a id="installation"></a>🚀 Installation
@@ -144,21 +153,18 @@ A full-stack MERN application for tracking job applications, managing placement 
 - **npm** or **yarn** package manager
 
 ### Step 1: Clone the Repository
-
 ```bash
 git clone <your-repository-url>
 cd MERN
 ```
 
 ### Step 2: Install Server Dependencies
-
 ```bash
 cd server
 npm install
 ```
 
 ### Step 3: Install Client Dependencies
-
 ```bash
 cd ../client
 npm install
@@ -171,7 +177,6 @@ npm install
 ### Backend Configuration
 
 1. Create a `.env` file in the `server` directory:
-
 ```env
 PORT=5000
 MONGO_URI=mongodb://localhost:27017/smarttrack
@@ -179,7 +184,6 @@ JWT_SECRET=your_super_secret_jwt_key_here
 ```
 
 **For MongoDB Atlas:**
-
 ```env
 MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/smarttrack?retryWrites=true&w=majority
 ```
@@ -187,7 +191,6 @@ MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/smarttrack?retryWr
 ### Frontend Configuration
 
 The frontend is configured to connect to `http://localhost:5000/api` by default. If your backend runs on a different port, update `client/src/api/axios.js`:
-
 ```javascript
 baseURL: "http://localhost:YOUR_PORT/api";
 ```
@@ -196,29 +199,30 @@ baseURL: "http://localhost:YOUR_PORT/api";
 
 ## <a id="usage"></a>💻 Usage
 
+### Try the Live Demo
+
+Visit **[https://devang-smarttrack.vercel.app](https://devang-smarttrack.vercel.app)** to see the application in action!
+
 ### Start the Development Server
 
 1. **Start MongoDB** (if running locally):
-
-   ```bash
+```bash
    mongod
-   ```
+```
 
 2. **Start Backend Server**:
-
-   ```bash
+```bash
    cd server
    npm run dev
-   ```
+```
 
    Server runs on `http://localhost:5000`
 
 3. **Start Frontend Development Server**:
-
-   ```bash
+```bash
    cd client
    npm run dev
-   ```
+```
 
    Client runs on `http://localhost:5173`
 
@@ -227,14 +231,12 @@ baseURL: "http://localhost:YOUR_PORT/api";
 ### Build for Production
 
 **Backend:**
-
 ```bash
 cd server
 npm start
 ```
 
 **Frontend:**
-
 ```bash
 cd client
 npm run build
@@ -248,7 +250,6 @@ npm run preview
 ### Authentication Endpoints
 
 #### Register User
-
 ```http
 POST /api/users
 Content-Type: application/json
@@ -261,7 +262,6 @@ Content-Type: application/json
 ```
 
 #### Login
-
 ```http
 POST /api/users/login
 Content-Type: application/json
@@ -273,28 +273,24 @@ Content-Type: application/json
 ```
 
 #### Get Current User
-
 ```http
 GET /api/users/me
 Authorization: Bearer <token>
 ```
 
 #### Refresh Access Token
-
 ```http
 POST /api/users/refresh
 Cookie: jwt=<refresh_token>
 ```
 
 #### Logout
-
 ```http
 POST /api/users/logout
 Cookie: jwt=<refresh_token>
 ```
 
 #### Update Profile
-
 ```http
 PUT /api/users/me
 Authorization: Bearer <token>
@@ -308,7 +304,6 @@ Content-Type: application/json
 ```
 
 #### Change Password
-
 ```http
 PUT /api/users/change-password
 Authorization: Bearer <token>
@@ -323,14 +318,12 @@ Content-Type: application/json
 ### Application Endpoints
 
 #### Get Applications (with Pagination & Search)
-
 ```http
 GET /api/applications?page=1&limit=10&search=Google&status=applied&sortBy=newest
 Authorization: Bearer <token>
 ```
 
 #### Create Application
-
 ```http
 POST /api/applications
 Authorization: Bearer <token>
@@ -345,7 +338,6 @@ Content-Type: application/json
 ```
 
 #### Update Application
-
 ```http
 PUT /api/applications/:id
 Authorization: Bearer <token>
@@ -360,14 +352,12 @@ Content-Type: application/json
 ```
 
 #### Delete Application
-
 ```http
 DELETE /api/applications/:id
 Authorization: Bearer <token>
 ```
 
 #### Add Application Stage
-
 ```http
 PUT /api/applications/:id/stage
 Authorization: Bearer <token>
@@ -383,7 +373,6 @@ Content-Type: application/json
 ---
 
 ## <a id="project-structure"></a>📁 Project Structure
-
 ```
 MERN/
 ├── client/                 # Frontend React application
@@ -440,11 +429,14 @@ MERN/
 - [MongoDB](https://www.mongodb.com/) - Database
 - [Tailwind CSS](https://tailwindcss.com/) - CSS framework
 - [Lucide Icons](https://lucide.dev/) - Icon library
+- [Vercel](https://vercel.com/) - Deployment platform
 
 ---
 
 <div align="center">
 
 ⭐ Star this repo if you find it helpful. Thank you ~ Devang Chauhan
+
+**🌐 [View Live Demo](https://devang-smarttrack.vercel.app)**
 
 </div>
